@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeless Tales</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="timeless.css">
+</head>
+
+<script>
+    document.addEventListener("scroll", function () {
+    let items = document.querySelectorAll(".scroll-item");
+    let scrollY = window.scrollY;
+
+    items.forEach((item, index) => {
+        let revealPoint = window.innerHeight / 1.2; // Adjust trigger point
+        let itemTop = item.getBoundingClientRect().top;
+
+        if (itemTop < revealPoint) {
+            setTimeout(() => {
+                item.classList.add("show");
+            }, index * 300); // Delay each image
+        }
+    });
+});
+
+/*document.addEventListener("scroll", function () {
+    let elements = document.querySelectorAll(".main,.backbox");
+    let windowHeight = window.innerHeight;
+
+    elements.forEach((el) => {
+        let rect = el.getBoundingClientRect();
+        if (rect.top < windowHeight - 100) { // Adjust trigger point
+            el.classList.add("show");
+        }
+    });
+});*/
+
+
+</script>
+
+<body>
+    <div class="main" style="display: flex; flex-direction: column;">
+        <div class="topbar">
+            <p style="font-size: 25px; color:white; padding:5px;">My Projects</p>
+        </div>
+        <div class="home" style="margin:10px 10px; ">
+            <a href="homepage.html"
+                style="text-decoration: none; font-size:35px; color:black; margin-right: 20px;">Home</a>
+            <a href="#prob"
+                style="text-decoration: none; font-size:35px; color:black; margin-right: 20px;">Problem</a>
+            <a href="#kt1"
+                style="text-decoration: none; font-size:35px; color:black; margin-right: 20px;">Research</a>
+            <a href="#wf"
+                style="text-decoration: none; font-size:35px; color:black; margin-right: 20px;">Wireframe</a>
+            <a href="#mk"
+                style="text-decoration: none; font-size:35px; color:black; margin-right: 20px;">Mockup</a>
+        </div>
+    </div>
+
+    <div class="backbox">
+        <div class="mainimage">
+            <img src="Mobile App Screen Mockup, Mosaic 1.png" style="width:95%; height:auto; margin-top:20px;
+    margin-left:35px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);">
+        </div>
+
+        <div id="abt" style="margin-top: 30px;">
+            <p class="mat">
+                About:<br>
+                <p class="par">
+                "Timeless Tales"is a mobile app that offers an immersive, 
+                vintage-themed exploration of historic architecture and forgotten landmarks.<br> 
+                Featuring interactive maps, AR restoration, architectural sketches, and immersive audio tours,
+                 it blends modern technology with nostalgic aesthetics, providing a rich, 
+                 deep dive into history for architecture and culture enthusiasts.</p></p><br>
+        </div><hr><br>
+        <div id="prob" style="margin-top: 30px;">
+            <p class="mat">
+                Problem Statement:<br>
+                <p class="par">
+                Users like John, an architecture enthusiast, struggle with history apps 
+                that lack an immersive, vintage experience. Current apps use modern, 
+                sterile designs, missing the emotional connection users seek when exploring 
+                historic landmarks. John desires an app that blends historical exploration 
+                with a nostalgic aesthetic for a deeper engagement.</p></p><br>
+        </div><hr><br>
+        <div id="pbo" style="margin-top: 30px;">
+            <p class="mat">
+                Project Background and Objective:<br>
+                <p class="par">Timeless Tales seeks to provide an immersive, vintage-themed mobile app that 
+                brings forgotten landmarks and architecture to life. With vintage maps, 
+                AR restoration, architectural sketches, and curated storytelling, it combines 
+                nostalgic design with modern tools to enhance historical exploration and foster 
+                a deeper connection to the past.</p></p><br>
+        </div><hr><br>
+        <div id="kt1" style="margin-top: 30px;">
+            <p class="mat">
+                Key takeaways from users prior to project accomplishment:<br><br>
+                <ul>
+                <li>"The design is too modern, I was hoping for something that would 
+                    make me feel like I’m truly stepping back in time."</li>
+                <li>"I wish there were more visual cues or storytelling that made me 
+                    feel connected to the history I’m exploring."</li></ul></p><br>
+        </div><hr><br>
+        <div id="kt1" style="margin-top: 30px;">
+            <p class="mat">
+                Key takeaways from competitive audits:<br><br>
+                <ol>
+                    <li style="margin-left: 100px";>Google Arts & Culture:</li><br>
+                        <ul>
+                            <li style="list-style: circle; margin-left: 150px;">Strength:</li><br>
+                            <ul>
+                                <li style="list-style: disc;">Global reach with a vast database of museums and landmarks. </li>
+                                <li style="list-style: disc;">High-quality visuals and integration with Google Street View. </li>
+                                <li style="list-style: disc;">Extensive educational content on history and art. </li>
+                            </ul>
+                            <li style="list-style: circle; margin-left: 150px;">Weakness:</li><br>
+                            <ul>
+                                <li style="list-style: disc;">Lacks immersive, vintage aesthetics. </li>
+                                <li style="list-style: disc;">User interface feels more like an archive than an experience. </li>
+                                <li style="list-style: disc;">Not focused on architecture enthusiasts or historical site exploration. </li>
+                            </ul>
+                        </ul>
+                        <br>
+                    <li style="margin-left: 100px">Historypin:</li><br>
+                        <ul>
+                            <li style="list-style: circle; margin-left: 150px;">Strength:</li><br>
+                            <ul>
+                                <li style="list-style: disc;">User-generated content creates a community-driven experience.  </li>
+                                <li style="list-style: disc;">Geolocation-based historical photos and stories.  </li>
+                                <li style="list-style: disc;">Rich variety of historical content. </li>
+                            </ul>
+                            <li style="list-style: circle; margin-left: 150px;">Weakness:</li>
+                            <ul>
+                                <li style="list-style: disc;">Lacks visual immersion and vintage design. </li>
+                                <li style="list-style: disc;">Content quality may be inconsistent. </li>
+                                <li style="list-style: disc;">No augmented reality or detailed guided tours. </li>
+                            </ul>
+                        </ul>
+                </ol>
+            </p><br>
+        </div><hr><br>    
+
+        <p class="mat" id="wf">Brainstorming and Wireframing</p>
+        <div class="parent" style="display:flex; flex-direction: row; flex-wrap: wrap; margin-top:30px; justify-content: space-around; align-items: center;">
+            <div class="imge" >
+                <div class="topbar" style="margin-left:0;width: 600px;color:white; font-size: 32px;"><p style="margin-left: 10px;">Brainstorming_1.png</p></div>
+                <img src="imh (1).jpeg" style="width:600px; height:auto;">
+            </div>
+
+            <div class="imge" >
+                <div class="topbar" style="margin-left:0;width: 600px;color:white; font-size: 32px;"><p style="margin-left: 10px;">Brainstorming_2.png</p></div>
+                <img src="imh (2).jpeg" style="width:600px; height:auto; ">
+            </div>
+
+            <div class="imge" style="margin-top: 30px;" >
+                <div class="topbar" style="margin-left:0;width:100%; color:white; font-size: 32px;"><
+                    p style="margin-left: 10px;">Sketching.png</p></div>
+                <img src="imh3.jpeg" style="width:100%; height:auto;">
+            </div>
+        
+        </div>
+
+        <div style="margin-top:30px;">
+            <div class="topbar" style="margin-left:0;width:100%; color:white; font-size: 32px;">
+                <p style="margin-left: 10px;">Prototype.png</p></div>
+            <img src="Screenshot 2025-03-30 151555.png" style="width:100%;height:auto;">
+        </div>
+
+        <p class="mat" id="mk">Sample Screens</p>
+        <div class="scroll-container">
+            <img src="screen.png" class="scroll-item">
+            <img src="scc1.png" class="scroll-item">
+            <img src="scc2.png" class="scroll-item">
+            <img src="scc3.png" class="scroll-item">
+            <img src="scc.png" class="scroll-item">
+        </div>
+
+        <div>
+            <div class="topbar" style="margin-left:0;width:100%; color:white; font-size: 32px;">
+                <p style="margin-left: 10px;">Mockup_1.mp4</p></div>
+        <video autoplay muted loop style="width:100%; height:auto;">
+            <source src="main.mp4">
+        </video>
+        </div>
+
+        <div>
+            <div class="topbar" style="margin-left:0;width:100%; color:white; font-size: 32px;">
+                <p style="margin-left: 10px;">Mockup_2.mp4</p></div>
+        <video autoplay muted loop style="width:100%; height:auto;">
+            <source src="menus.mp4">
+        </video>
+        </div>
+
+        <div class="im" >
+            <div class="topbar" style="margin-left:0;width:100%; color:white; font-size: 32px;">
+                <p style="margin-left: 10px;">Mockup_3.png</p></div>
+            <img src="iphone-coin-spin.png" style="width:100%; height:auto;">
+        </div>
+
+        <div>
+            <div class="topbar" style="margin-left:0;width:100%; color:white; font-size: 32px;">
+                <p style="margin-left: 10px;">Mockup_4.mp4</p></div>
+        <video autoplay muted loop style="width:100%; height:auto;">
+            <source src="scre2.mp4" >
+        </video>
+        </div>
+
+        <div class="im" >
+            <div class="topbar" style="margin-left:0;width:100%; color:white; font-size: 32px;">
+                <p style="margin-left: 10px;">Mockup_5.png</p></div>
+            <img src="iphone-coin-spin (1).png" style="width:100%; height:auto;">
+        </div>
+
+        <div class="im">
+            <div class="topbar" style="margin-left:0;width:100%; color:white; font-size: 32px;">
+                <p style="margin-left: 10px;">Mockup_6.png</p></div>
+            <img src="iphone-spin-up.png"style="width:100%; height:auto;">
+        </div>
+        <br>
+        <div class="vid" >
+            <div class="topbar" style="margin-left:0;width:100%; color:white; font-size: 32px;">
+                <p style="margin-left: 10px;">Working.mp4</p></div>
+            
+            <video controls muted style="width:100%; height:auto;">
+                <source src="Untitled video - Made with Clipchamp (87).mp4" type="video/mp4">
+                OOPS !!! Error Occured.
+            </video>
+        </div>
+
+       
+
+            
+        
+
+    </div>
+</body>
+</html>

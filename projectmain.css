@@ -1,0 +1,76 @@
+*{
+    padding:0;
+    margin:0;
+    font-family: "VT323", monospace;
+    font-style: normal;
+}
+
+body{
+    background-color: #c0c0c0;
+    cursor:url("pointer.png"), auto;
+
+}
+
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    cursor:url("hand.png"),auto;
+}
+
+.topbar{
+    background: rgb(0,1,88);
+    background: linear-gradient(180deg, rgba(0,1,88,1) 0%, rgba(0,1,123,1) 17%, rgba(0,1,123,1) 91%, rgba(0,1,88,1) 100%);
+    width:99%;
+    height:36px;
+    margin-top:5px;
+    margin-left:4px;
+}
+
+.backbox{
+    margin-top:5px;
+    margin-left:35px;
+    background-color: white;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    border: 1px solid transparent; 
+    border-image: linear-gradient(180deg,white,rgb(15, 15, 15)) 1;
+    width:95%;
+    height: 500px;
+}
+
+.icons{
+    width:fit-content;
+    height:fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.messbox{
+    background-color: #C0C0C0;
+    position:absolute;
+    bottom:0;
+    margin-bottom: 80px;
+    margin-right:80px;
+    right:0;
+    width:300px;
+    height:150px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    border: 1px solid transparent; 
+    border-image: linear-gradient(180deg,white,rgb(15, 15, 15)) 1;
+
+}
+
+.blue{
+    background-color: #000096;
+    color:white;
+    font-size: 30px;
+    text-align: center;
+    justify-content: center;
+    height:30px;
+    width:300px;
+}
+
+

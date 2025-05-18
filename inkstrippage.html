@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study- InkStrip</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=VT323&display=swap" rel="stylesheet">
+<link rel="icon" href="Group 100.png" type="image/png">
+
+</head>
+
+
+<style>
+    *{
+    padding:0;
+    margin:0;
+    font-family: "VT323", monospace;
+    font-style: normal;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #FFEAFB;
+    cursor:url("pointer.png"), auto;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    cursor:url("pinkhand.png"),auto;
+}
+
+
+.topbar{
+    background: #5F0036;
+    background: linear-gradient(180deg, #5F0036 0%, #970057 17%, #970057 91%, #5F0036 100%);
+    width:99%;
+    height:3.1vw;
+    margin-top:0.288vw;
+    margin-left:0.291vw;
+}
+
+
+.backbox{
+    margin-top:0.488vw;
+    margin-left:2.5vw;
+    background-color: white;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    border: 1px solid transparent; 
+    border-image: linear-gradient(180deg,white,#970057) 1;
+    width:95%;
+    height: auto;
+}
+
+.mat{
+    width:95%; 
+    height:auto; 
+    margin-top:1.465vw; 
+    margin-left:2.5vw; 
+    color:black; 
+    font-size:2.3vw;
+    font-family: "Inconsolata", monospace;
+}
+
+ol li{
+    font-family: "Inconsolata", monospace;
+    margin-left: 19.531vw;
+    font-size: 1.9vw;
+}
+
+ul li{
+    font-family: "Inconsolata", monospace;
+    margin-left: 19.531vw;
+    font-size: 1.9vw;
+}
+
+.par{
+    width:95%; 
+    height:auto; 
+    margin-top:1.465vw; 
+    margin-left:2.8vw; 
+    color:black; 
+    font-family: "Inconsolata", monospace;
+    font-size: 1.9vw;
+}
+
+
+
+.scroll-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.scroll-item {
+    width: 19.531vw; /* Adjust as needed */
+    height: auto;
+    /*margin-left: 30px;
+    margin-right: 25px;*/
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 1s ease-out, opacity 1s ease-out;
+    border-radius: 1.367vw;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+</style>
+
+<script>
+    document.addEventListener("scroll", function () {
+    let items = document.querySelectorAll(".scroll-item");
+    let scrollY = window.scrollY;
+
+    items.forEach((item, index) => {
+        let revealPoint = window.innerHeight / 1.2; // Adjust trigger point
+        let itemTop = item.getBoundingClientRect().top;
+
+        if (itemTop < revealPoint) {
+            setTimeout(() => {
+                item.classList.add("show");
+            }, index * 300); // Delay each image
+        }
+    });
+});
+</script>
+
+<body>
+    <div class="main" style="display: flex; flex-direction: column;">
+        <div class="topbar">
+            <p style="font-size: 1.941vw; color:white; padding:0.391vw;">InkStrip</p>
+        </div>
+        <div class="home" style="margin:0.777vw;">
+            <a href="homepagepink.html"
+                style="text-decoration: none; font-size:2.4vw; color:black; margin-right: 1.953vw;">Home</a>
+            <a href="#prob"
+                style="text-decoration: none; font-size:2.4vw; color:black; margin-right: 1.953vw;">Problem</a>
+            <a href="#kt1"
+                style="text-decoration: none; font-size:2.4vw; color:black; margin-right: 1.953vw;">Research</a>
+            <a href="#wf"
+                style="text-decoration: none; font-size:2.4vw; color:black; margin-right: 1.953vw;">Wireframe</a>
+            <a href="#mk"
+                style="text-decoration: none; font-size:2.4vw; color:black; margin-right: 1.953vw;">Mockup</a>
+        </div>
+    </div>
+
+    <div class="backbox">
+        <div class="mainimage">
+            <img src="Mobile App Screen Mockup, Mosaic 1.png" style="width:95%; height:auto; margin-top:1.465vw;
+    margin-left:2.5vw; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);">
+        </div>
+
+        <div id="abt" style="margin-top: 2.441vw;">
+            <p class="mat">
+                About:<br>
+                <p class="par">
+                    Comic enthusiasts and aspiring artists face challenges in discovering rare comics, 
+                    engaging with the community, and showcasing their art effectively. Our platform aims 
+                    to bridge these gaps by providing comprehensive resources and a supportive network.</p></p><br>
+        </div><hr><br>
+        <div id="prob" style="margin-top: 2.441vw;">
+            <p class="mat">
+                Problem Statement:<br>
+                <p class="par">
+                    InkStrip addresses the challenges faced by both Jake, a passionate comic artist, and Lily,
+                     a devoted reader. Jake struggles with limited platforms offering the right tools and
+                      visibility to showcase his comics, while Lily finds it difficult to discover fresh,
+                       interactive content that aligns with her interests.
+                </p></p><br>
+        </div><hr><br>
+        <div id="pbo" style="margin-top: 2.441vw;">
+            <p class="mat">
+                Project Background and Objective:<br>
+                <p class="par">InkStrip is designed to help creators like Jake easily publish, distribute, 
+                    and monetize comics, while also providing readers like Lily with a rich, 
+                    interactive experience. By offering specialized tools, community engagement 
+                    features, and a diverse comic library, InkStrip connects creators with their 
+                    audience and enhances the reading experience.</p></p><br>
+        </div><hr><br>
+        <div id="kt1" style="margin-top: 2.441vw;">
+            <p class="mat">
+                Key Takings from the end-users before redesigning:<br><br>
+                <ul>
+                <li style="margin-left: 9.766vw; margin-right: 2.93vw;">Jake (Comic Artist): "I can never seem to get my comics noticed on other platforms. 
+                    The tools aren't really made for comic creators, and it feels like a hassle to format everything. 
+                    I just want to focus on creating, not on dealing with technical issues."</li><br>
+                <li style="margin-left: 9.766vw; margin-right: 2.93vw;">Lily (Reader): "It’s hard to find comics that stand out. I’m always looking for fresh stories,
+                     but it feels like the platforms are either too cluttered or don’t offer enough customization 
+                     to find what I enjoy. I want something more interactive and engaging."</li></ul></p><br>
+        </div><hr><br>
+        <div id="kt1" style="margin-top: 2.441vw;">
+            <p class="mat">
+                Competitive Audit Findings:<br><br>
+                <ol>
+                    <li style="margin-left: 9.766vw;";>Wattpad:</li><br>
+                        <ul>
+                            <li style="list-style: circle; margin-left: 10vw;">Strength:</li><br>
+                            <ul>
+                                <li style="list-style: disc;">Large User Base, giving creators significant exposure and community interaction. </li>
+                                <li style="list-style: disc;">Clean and simple outlook. </li>
+                            </ul>
+                            <li style="list-style: circle; margin-left: 10vw;">Weakness:</li><br>
+                            <ul>
+                                <li style="list-style: disc;">Primarily a platform for prose, limiting tools and features specifically for comic creators. </li>
+                            </ul>
+                        </ul>
+                        <br>
+                    <li style="margin-left: 9.766vw;">GlobalComix:</li><br>
+                        <ul>
+                            <li style="list-style: circle; margin-left: 10vw;">Strength:</li><br>
+                            <ul>
+                                <li style="list-style: disc;">Supports multiple languages and offers flexible monetization options like subscriptions and pay-per-chapter.</li>
+                            </ul>
+                            <li style="list-style: circle; margin-left: 10vw;">Weakness:</li>
+                            <ul>
+                                <li style="list-style: disc;">Has a more niche audience compared to Wattpad, which may limit visibility for new creators. </li>
+                            </ul>
+                        </ul>
+                </ol>
+            </p><br>
+        </div><hr><br>
+
+        <p class="mat" id="wf">Brainstorming and Wireframing</p>
+        <div class="parent" style="display:flex; flex-direction: row; flex-wrap: wrap; margin-top:2.441vw; justify-content: space-around; align-items: center;">
+            <div class="imge" >
+                <div class="topbar" style="margin-left:0;width: 53.711vw;color:white; font-size: 2.734vw;"><p style="margin-left: 10px;">Brainstorming_1.png</p></div>
+                <img src="ssi (2).jpeg" style="width:53.711vw; height:auto;">
+            </div>
+
+            <div class="imge" >
+                <div class="topbar" style="margin-left:0;width: 53.711vw;color:white; font-size: 2.734vw;">
+                    <p style="margin-left: 10px;">Brainstorming_2 + Sketching.png</p></div>
+                <img src="ssi (1).jpeg" style="width:53.711vw; height:auto; ">
+            </div>
+
+        
+        </div>
+
+        <div style="margin-top:2.441vw;">
+            <div class="topbar" style="margin-left:0;width:100%; color:white; font-size: 2.734vw;">
+                <p style="margin-left: 10px;">Prototype.png</p></div>
+            <img src="inkss.png" style="width:100%;height:auto;">
+        </div>
+
+        <p class="mat" id="mk">Sample Screens</p>
+        <div class="scroll-container">
+            <img src="sssii (1).png" class="scroll-item">
+            <img src="sssii (3).png" class="scroll-item">
+            <img src="sssii (4).png" class="scroll-item">
+            <img src="ssiiiii.png" class="scroll-item">
+        </div>
+
+        <div>
+            <div class="topbar" style="margin-left:0;width:100%; color:white; font-size: 2.734vw;">
+                <p style="margin-left: 10px;">Mockup_1.mp4</p></div>
+        <video autoplay muted loop style="width:100%; height:auto;">
+            <source src="moky (1).mp4">
+        </video>
+        </div>
+
+        <div>
+            <div class="topbar" style="margin-left:0;width:100%; color:white; font-size: 2.734vw;">
+                <p style="margin-left: 10px;">Mockup_2.mp4</p></div>
+        <video autoplay muted loop style="width:100%; height:auto;">
+            <source src="moky (2).mp4">
+        </video>
+        </div>
+
+
+        <div>
+            <div class="topbar" style="margin-left:0;width:100%; color:white; font-size: 2.734vw;">
+                <p style="margin-left: 10px;">Mockup_3.mp4</p></div>
+        <video autoplay muted loop style="width:100%; height:auto;">
+            <source src="moky (3).mp4" >
+        </video>
+        </div>
+
+
+        
+        <br>
+        <div class="vid" >
+            <div class="topbar" style="margin-left:0;width:100%; color:white; font-size: 2.734vw;">
+                <p style="margin-left: 10px;">Working.mp4</p></div>
+            
+            <video controls muted style="width:100%; height:auto;">
+                <source src="inkvd.mp4" type="video/mp4">
+                OOPS !!! Error Occured.
+            </video>
+        </div>
+
+        
+    </div>
+</body>
+</html>

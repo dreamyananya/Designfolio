@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+<link rel="icon" href="Group 100.png" type="image/png">
+</head>
+<style>
+    *{
+    padding:0;
+    margin:0;
+    font-family: "VT323", monospace;
+    font-style: normal;
+}
+
+body{
+    background-color: #FFEAFB;
+    cursor:url("pinkpoi.png"), auto;
+
+}
+
+a:hover{
+    cursor:url("pinkhand.png"),auto;
+}
+
+.topbar{
+    background: #5F0036;
+    background: linear-gradient(180deg, #5F0036 0%, #970057 17%, #970057 91%, #5F0036 100%);
+    width:99%;
+    height:36px;
+    
+    margin-top:5px;
+    margin-left:4px;
+}
+
+.container {
+      display: flex;
+      flex-wrap: wrap-reverse;
+      width: 90%;
+      max-width: 1200px;
+      
+      gap: 40px;
+    }
+
+.inside{
+    background-color: #970057;
+    width:97%; 
+    height:460px; 
+    margin:20px;
+    box-shadow: inset 1px 1px 3px rgba(255, 255, 255, 0.932);
+    border: 1px solid rgb(255, 255, 255);    
+}
+
+.cont{
+    font-size: 70px;
+    color:#970057;
+    cursor:url("pinkpoi.png"), auto;
+
+}
+
+ .content{
+    flex:1;
+    margin-top:10px;
+    margin-left: 30px;
+}
+
+.slider {
+      flex: 1;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+.slides {
+      display: flex;
+      width: 500%;
+      animation: slide 10s infinite linear;
+    }
+
+.slide {
+      width: 100%;
+      flex-shrink: 0;
+    }
+
+.slide img {
+      width: 550px;
+      height: auto;
+      display: block;
+      border-radius: 10px;
+    }
+
+
+.content{
+    margin-top:10px;
+    margin-left: 20px;
+}
+
+@keyframes slide {
+      0%   { transform: translateX(0%); }
+      20%  { transform: translateX(0%); }
+      25%  { transform: translateX(-100%); }
+      45%  { transform: translateX(-100%); }
+      50%  { transform: translateX(-200%); }
+      70%  { transform: translateX(-200%); }
+      75%  { transform: translateX(-300%); }
+      95%  { transform: translateX(-300%); }
+      100% { transform: translateX(-400%); }
+    }
+
+
+</style>
+
+<body>
+    <div class="main" style="display: flex; flex-direction: column;">
+        <div class="topbar">
+            <p style="font-size: 25px; color:white; padding:5px;">My Skills</p>
+        </div>
+        <div class="home" style="margin:10px 10px; ">
+            <a href="homepagepink.html" style="text-decoration: none; font-size:35px; color:black;">Home
+            </a>
+        </div>
+
+        <div class="container">
+    <div class="content">
+                    <p class="cont">Wireframing</p>
+                    <p class="cont">Protyping</p>
+                    <p class="cont">Research</p>
+                    <p class="cont">Visual Designing</p>
+                    <p class="cont">Content Writing</p>
+                    <p class="cont">Frontend</p>
+                </div>
+
+
+  <div class="slider" style="margin-left: 90px;">
+    <div class="slides">
+      <div class="slide"><img src="Desktop - 13.png" alt="Slide 1"></div>
+      <div class="slide"><img src="Desktop - 13k.png" alt="Slide 2"></div>
+      <div class="slide"><img src="wf.png" alt="Slide 3"></div>
+      <div class="slide"><img src="ck.html - portfoliownd - Visual Studio Code 15-05-2025 05_20_14 PM.png" alt="Slide 4"></div>
+      <div class="slide"><img src="Calvin Klein - Google Chrome 15-05-2025 05_19_45 PM.png" alt="Slide 5"></div>
+    </div>
+  </div>
+  </div>
+  </div>
+</body>
+</html>

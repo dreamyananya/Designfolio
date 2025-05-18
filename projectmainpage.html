@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    
+</head>
+
+<style>
+    *{
+    padding:0;
+    margin:0;
+    font-family: "VT323", monospace;
+    font-style: normal;
+}
+
+body{
+    background-color: #c0c0c0;
+    cursor:url("pointer.png"), auto;
+
+}
+
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    cursor:url("hand.png"),auto;
+}
+
+.topbar{
+    background: rgb(0,1,88);
+    background: linear-gradient(180deg, rgba(0,1,88,1) 0%, rgba(0,1,123,1) 17%, rgba(0,1,123,1) 91%, rgba(0,1,88,1) 100%);
+    width:99%;
+    height:36px;
+    margin-top:5px;
+    margin-left:4px;
+}
+
+.backbox{
+    margin-top:5px;
+    margin-left:35px;
+    background-color: white;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    border: 1px solid transparent; 
+    border-image: linear-gradient(180deg,white,rgb(15, 15, 15)) 1;
+    width:95%;
+    height: 500px;
+}
+
+.icons{
+    width:fit-content;
+    height:fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.messbox{
+    background-color: #C0C0C0;
+    position:absolute;
+    bottom:0;
+    margin-bottom: 80px;
+    margin-right:80px;
+    right:0;
+    width:300px;
+    height:150px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    border: 1px solid transparent; 
+    border-image: linear-gradient(180deg,white,rgb(15, 15, 15)) 1;
+
+}
+
+.blue{
+    background-color: #000096;
+    color:white;
+    font-size: 30px;
+    text-align: center;
+    justify-content: center;
+    height:30px;
+    width:300px;
+}
+</style>
+
+<body>
+    <div class="main" style="display: flex; flex-direction: column;">
+        <div class="topbar">
+            <p style="font-size: 25px; color:white; padding:5px;">My Projects</p>
+        </div>
+        <div class="home" style="margin:10px 10px; ">
+            <a href="homepage.html"
+                style="text-decoration: none; font-size:25px; color:black; margin-right: 20px;">Home</a>
+            <a href="projectmainpage.html"
+                style="text-decoration: none; font-size:25px; color:black; margin-right: 20px;">Projects</a>
+            <a href="homepage.html"
+                style="text-decoration: none; font-size:25px; color:black; margin-right: 20px;">Redesigns</a>
+        </div>
+
+        <div class="backbox">
+            <div class="icons">
+                <a href="inkstrippage.html">
+                    <div class="icon1" style="margin:50px; width:61px;">
+                        <img src="Me.png" style="width:58px; height: auto;">
+                        <p style="font-size: 25px; color:black;">Inkstrip</p>
+                    </div>
+                </a>
+                <a href="timelesspage.html">
+                    <div class="icon1" style="margin:50px; width:61px;">
+                        <img src="Me.png" style="width:58px; height: auto;">
+                        <p style="font-size: 25px; color: black;">Timeless Tails</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="icon1" style="margin:50px; width:61px;">
+                        <img src="Me.png" style="width:58px; height: auto;">
+                        <p style="font-size: 25px; color:black;">SmartAi</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="icon1" style="margin:50px; width:61px;">
+                        <img src="Me.png" style="width:58px; height: auto;">
+                        <p style="font-size: 25px; color:black;">Relivee</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="messbox">
+                <p class="blue">Error</p>
+                <div class="fl" style="display:flex;">
+                    <div class="item">
+                        <p style="color:black; font-size: 25px; margin-left: 10px;margin-top:10px;">Windows 
+                            found a cat in your system.</p>
+                    </div>
+                    <div class="item">
+                        <img src="cat.png" style="width:100px;height:100px;margin-top:10px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
