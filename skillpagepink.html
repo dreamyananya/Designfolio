@@ -9,12 +9,20 @@
 <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 <link rel="icon" href="Group 100.png" type="image/png">
 </head>
+
+
+
 <style>
     *{
     padding:0;
     margin:0;
     font-family: "VT323", monospace;
     font-style: normal;
+}
+
+body, html{
+    overflow: hidden;
+
 }
 
 body{
@@ -37,14 +45,7 @@ a:hover{
     margin-left:0.3vw;
 }
 
-.container {
-      display: flex;
-      flex-wrap: wrap-reverse;
-      width: 90%;
-      max-width: 1200px;
-      
-      gap: 40px;
-    }
+
 
 .inside{
     background-color: #970057;
@@ -57,93 +58,97 @@ a:hover{
 
 .cont{
     font-size: 5.8vw;
-    color:#970057;
+    color:#ffffff;
     cursor:url("pinkpoi.png"), auto;
 
 }
 
- .content{
-    flex:1;
-    margin-top:0.87vw;
-    margin-left: 2vw;
-}
 
-.slider {
-      flex: 1;
-      overflow: hidden;
-      border-radius: 10px;
-    }
 
-.slides {
-      display: flex;
-      width: 500%;
-      animation: slide 10s infinite linear;
-    }
-
-.slide {
+.slideshow-container {
+      position: fixed;
+      top: 3.9vw;
+      left: 0;
       width: 100%;
-      flex-shrink: 0;
+      height: 100%;
+      z-index: -1;
     }
 
-.slide img {
-      width: 48.8vw;
+    .slideshow-container img {
+      position: absolute;
+      width: 100%;
       height: auto;
-      display: block;
-      border-radius: 10px;
+      object-fit: cover;
+      
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .slideshow-container img.active {
+      opacity: 1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      color: white;
+      text-align: center;
+      top: 40%;
     }
 
 
-.content{
-    margin-top:10px;
-    margin-left: 20px;
-}
-
-@keyframes slide {
-      0%   { transform: translateX(0%); }
-      20%  { transform: translateX(0%); }
-      25%  { transform: translateX(-100%); }
-      45%  { transform: translateX(-100%); }
-      50%  { transform: translateX(-200%); }
-      70%  { transform: translateX(-200%); }
-      75%  { transform: translateX(-300%); }
-      95%  { transform: translateX(-300%); }
-      100% { transform: translateX(-400%); }
-    }
 
 
 </style>
 
+
+
 <body>
-    <div class="main" style="display: flex; flex-direction: column;">
+    
         <div class="topbar">
             <p style="font-size: 2vw; color:white; padding:5px;">My Skills</p>
         </div>
         <div class="home" style="margin:1vw; ">
-            <a href="homepagepink.html" style="text-decoration: none; font-size:3.12vw; color:black;">Home
+            <a href="homepagepink.html" style="text-decoration: none; font-size:3.12vw; color:rgb(255, 255, 255);">Home
             </a>
         </div>
 
-        <div class="container">
-    <div class="content">
-                    <p class="cont">Wireframing</p>
-                    <p class="cont">Protyping</p>
-                    <p class="cont">Research</p>
-                    <p class="cont">Visual Designing</p>
-                    <p class="cont">Content Writing</p>
-                    <p class="cont">Frontend</p>
+        <div class="slideshow-container">
+            <img src="Group 250.png" class="slide active" />
+            <img src="Universe - Dekstop.png" class="slide" />
+            <img src="MacBook Air - 28.png" class="slide" />
+            <img src="Frame 4.png" class="slide" />
+        </div>
+
+        <div style="display: flex; flex-direction: row; align-items: center; justify-content: space-around;">
+        <div class="content" style=" display: flex; flex-direction: column; flex-wrap: wrap; justify-content: center; align-items: center;">
+                    <p class="cont" style="padding: 20px;">Wireframing</p>
+                    <p class="cont"style="padding: 20px;">Protyping</p>
+                    <p class="cont"style="padding: 20px;">Research</p>
                 </div>
+        <div class="content" style=" display: flex; flex-direction: column; flex-wrap: wrap; justify-content: center; align-items: center;">
+                    
+                    <p class="cont"style="padding: 20px;">Visual Designing</p>
+                    <p class="cont"style="padding: 20px;">Content Writing</p>
+                    <p class="cont"style="padding: 20px;">Frontend</p>
+                </div>
+        </div>
 
-
-  <div class="slider" style="margin-left: 7.813vw;">
-    <div class="slides">
-      <div class="slide"><img src="Desktop - 13.png" alt="Slide 1"></div>
-      <div class="slide"><img src="Desktop - 13k.png" alt="Slide 2"></div>
-      <div class="slide"><img src="wf.png" alt="Slide 3"></div>
-      <div class="slide"><img src="ck.html - portfoliownd - Visual Studio Code 15-05-2025 05_20_14 PM.png" alt="Slide 4"></div>
-      <div class="slide"><img src="Calvin Klein - Google Chrome 15-05-2025 05_19_45 PM.png" alt="Slide 5"></div>
-    </div>
-  </div>
+        <div style="position: absolute; bottom: 0; right: 10px;">
+            <img src="catgif.gif" style="width: 200px; height: auto;">
+        </div>
   </div>
   </div>
 </body>
+
+<script>
+    const slides = document.querySelectorAll(".slide");
+    let index = 0;
+
+    setInterval(() => {
+      slides[index].classList.remove("active");
+      index = (index + 1) % slides.length;
+      slides[index].classList.add("active");
+    }, 4000); // Change every 4 seconds
+  </script>
 </html>
