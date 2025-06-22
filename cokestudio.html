@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Case Study - Coke Studios</title>
+    <title>Case Study- InkStrip</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-    <link rel="icon" href="Group 100.png" type="image/png">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=VT323&display=swap" rel="stylesheet">
+<link rel="icon" href="Group 100.png" type="image/png">
+
 </head>
+
 
 <style>
     *{
@@ -19,12 +21,15 @@
     font-style: normal;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: #FFEAFB;
     cursor:url("pinkpoi.png"), auto;
 
 }
-
 
 a{
     text-decoration: none;
@@ -34,6 +39,7 @@ a:hover{
     cursor:url("pinkhand.png"),auto;
 }
 
+
 .topbar{
     background: #5F0036;
     background: linear-gradient(180deg, #5F0036 0%, #970057 17%, #970057 91%, #5F0036 100%);
@@ -42,6 +48,7 @@ a:hover{
     margin-top:0.288vw;
     margin-left:0.291vw;
 }
+
 
 .backbox{
     margin-top:0.488vw;
@@ -54,29 +61,244 @@ a:hover{
     height: auto;
 }
 
+.mat{
+    width:95%; 
+    height:auto; 
+    margin-top:1.465vw; 
+    margin-left:2.5vw; 
+    color:black; 
+    font-size:2.3vw;
+    font-family: "Inconsolata", monospace;
+}
+
+ol li{
+    font-family: "Inconsolata", monospace;
+    margin-left: 19.531vw;
+    font-size: 1.9vw;
+}
+
+ul li{
+    font-family: "Inconsolata", monospace;
+    margin-left: 19.531vw;
+    font-size: 1.9vw;
+}
+
+.par{
+    width:95%; 
+    height:auto; 
+    margin-top:1.465vw; 
+    margin-left:2.8vw; 
+    color:black; 
+    font-family: "Inconsolata", monospace;
+    font-size: 1.9vw;
+}
+
+
+
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 </style>
 
+
+
 <body>
-    <div class="main" style="display: flex; flex-direction: column;">
+    <div class="main" style="display: flex; flex-direction: column; position: fixed; width: 100%;background: #ffffff;
+background: linear-gradient(-1deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 1) 42%);">
         <div class="topbar">
             <p style="font-size: 1.941vw; color:white; padding:0.391vw;">Coke Studios</p>
         </div>
         <div class="home" style="margin:0.777vw;">
             <a href="index.html"
                 style="text-decoration: none; font-size:2.4vw; color:black; margin-right: 1.953vw;">Home</a>
-            <!--<a href="#prob"
+            <a href="projectmainpagepink.html"
+                style="text-decoration: none; font-size:2.4vw; color:black; margin-right: 1.953vw;">Back</a>
+            <a href="#prob"
                 style="text-decoration: none; font-size:2.4vw; color:black; margin-right: 1.953vw;">Problem</a>
             <a href="#kt1"
                 style="text-decoration: none; font-size:2.4vw; color:black; margin-right: 1.953vw;">Research</a>
+            <a href="#dp"
+                style="text-decoration: none; font-size:2.4vw; color:black; margin-right: 1.953vw;">Desgin Process</a>
             <a href="#wf"
                 style="text-decoration: none; font-size:2.4vw; color:black; margin-right: 1.953vw;">Wireframe</a>
             <a href="#mk"
-                style="text-decoration: none; font-size:2.4vw; color:black; margin-right: 1.953vw;">Mockup</a>-->
+                style="text-decoration: none; font-size:2.4vw; color:black; margin-right: 1.953vw;">Mockup</a>
         </div>
     </div>
+<br>
+    <br>
+    <div class="backbox">
+        <div class="mainimage">
+            <img src="cs12.jpeg" style="width:95%; height:auto; margin-top:1.465vw;
+    margin-left:2.5vw; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);">
+        </div>
 
-    <div style="display:flex; justify-content: center; align-items: center; flex-direction: column;">
-        <img src="cat.png" style="width:250px; height:auto;">
-        <p style="font-size: 100px; text-align: center;">Almost there !!<br>Stay tuned :)</p>
+        <div id="abt" style="margin-top: 2.441vw;">
+            <p class="mat">
+                About:<br>
+                <p class="par">
+                    Coke Studio is a music television series that brings together diverse musical artists, 
+                    genres, and cultures to create unique live-recorded music performances. 
+                    Originally launched in Pakistan in 2008 by Coca-Cola, it has since expanded to various countries, 
+                    including India, Bangladesh, the Middle East, and Africa.
+                </p></p><br>
+        </div><hr><br>
+        <div id="prob" style="margin-top: 2.441vw;">
+            <p class="mat">
+                Problem Statement:<br>
+                <p class="par">
+                    Coke Studio, despite its global impact and rich musical content, lacks a dedicated 
+                    listening platform. This project addresses the gap by designing a unified interface
+                     that allows users to discover, explore, and experience Coke Studio’s music across 
+                     regions and moods in one seamless space.
+                </p></p><br>
+        </div><hr><br>
+        <div id="pbo" style="margin-top: 2.441vw;">
+            <p class="mat">
+                Project Background and Objective:<br>
+                <p class="par">Coke Studio, despite its global popularity, lacks a centralized platform for 
+                    listeners to explore its diverse musical content across regions. This project aimed 
+                    to design a unified, immersive interface that brings together Coke Studio editions 
+                    from India, Pakistan, and beyond—allowing users to discover music by mood, artist,
+                     and culture, while celebrating the fusion of tradition and modern sound in 
+                     one seamless experience.</p></p><br>
+        </div><hr><br>
+        
+        <div id="kt1" style="margin-top: 2.441vw;">
+            <p class="mat">
+                Inspiration<br><br>
+                <ol>
+                    <li style="margin-left: 9.766vw;";>Mood-Based Playlists:</li><br>
+                        <ul>
+                            <li style="list-style: circle; margin-left: 10vw;"> 
+                                Inspired by Spotify's “Made for You” and JioSaavn's “Chill Vibes”, 
+                                I incorporated curated mood sections like Soulful, Energetic, Heartbreak, 
+                                and Fusion.
+                            </li><br>
+                        </ul>
+                    <br>
+                    <li style="margin-left: 9.766vw;">Artist-Centric Discovery:</li><br>
+                        <ul>
+                             <li style="list-style: circle; margin-left: 10vw;"> 
+                                Similar to artist pages on Spotify, I added Artist Spotlights with bios, 
+                                countries, and featured tracks for easier cultural and musical exploration.
+                            </li><br>
+                        </ul>
+                    <br>
+                    <li style="margin-left: 9.766vw;">Smart Filters:</li><br>
+                        <ul>
+                            <li style="list-style: circle; margin-left: 10vw;"> 
+                               Took cues from JioSaavn's genre + language filters to allow users to browse Coke 
+                               Studio content by region (India, Pakistan, Africa) and genre (Sufi, Indie, Folk).
+                            </li><br>
+                        </ul>
+                    <br>
+                    <li style="margin-left: 9.766vw;">Minimalist Playback UI:</li><br>
+                        <ul>
+                             <li style="list-style: circle; margin-left: 10vw;"> 
+                                Adopted clean layouts and intuitive icons from Apple Music and Spotify for the 
+                                player controls, focusing on simplicity and emotional immersion.
+                            </li><br>
+                        </ul>
+                    <br>
+                    <li style="margin-left: 9.766vw;">Personalized Listening Journey:</li><br>
+                        <ul>
+                             <li style="list-style: circle; margin-left: 10vw;"> 
+                                Inspired by “Your Library” and “Recently Played” sections, I designed mood 
+                                memory tiles and play history highlights to make the experience feel personal.
+                            </li><br>
+                        </ul>
+                    <br>
+                    <li style="margin-left: 9.766vw;">Visual Language:</li><br>
+                        <ul>
+                             <li style="list-style: circle; margin-left: 10vw;"> 
+                                Took design cues from Spotify’s contrast-heavy dark theme but softened it with 
+                                Coke Studio's warm reds and textured visuals for cultural resonance.
+                            </li><br>
+                        </ul>
+                    <br>
+                </ol>
+            </p><br>
+        </div><hr><br>
+
+        <p class="mat" id="dp">Brainstorming and Wireframing</p>
+        <div style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: center;">
+            <div class="imge" style="margin-top: 4.395vw; width: 50%;"  >
+                <div class="topbar" style="margin-left:0;width:100%;color:white; font-size: 2.734vw;">
+                    <p style="margin-left: 10px;">Brainstorming_1.png</p></div>
+                <img src="res2.jpg" style="width:100%; height:auto;">
+            </div>
+
+            <div class="imge" style="margin-top: 4.395vw;  width: 50%;">
+                <div class="topbar" style="margin-left:0;width: 100%;color:white; font-size: 2.734vw;">
+                    <p style="margin-left: 10px;">Brainstorming_2</p></div>
+                <img src="res23.jpg" style="width:100%; height:auto; ">
+            </div>
+        </div>
+
+
+
+        <div id="wf" style="display: flex; flex-direction: column;">
+            <div style="margin-top:2.441vw;">
+                    <div class="topbar" style="margin-left:0;width:100%; color:white; font-size: 2.734vw;">
+                        <p style="margin-left: 10px;">Wireframing1.png</p></div>
+                    <img src="wf1.png" style="width:100%;height:auto;">
+                </div>
+
+            <div style="display: flex; flex-direction: row; align-items: center; justify-content: space-evenly;">
+                <div style="margin-top:2.441vw;">
+                    <div class="topbar" style="margin-left:0;width:100%; color:white; font-size: 2.734vw;">
+                        <p style="margin-left: 10px;">Wireframing2.png</p></div>
+                    <img src="wf2.png" style="width:100%;height:auto;">
+                </div>
+                <div style="margin-top:2.441vw;">
+                    <div class="topbar" style="margin-left:0;width:100%; color:white; font-size: 2.734vw;">
+                        <p style="margin-left: 10px;">Wireframing3.png</p></div>
+                    <img src="wf3.png" style="width:100%;height:auto;">
+                </div>
+            </div>
+
+            <div style="margin-top:2.441vw;">
+                <div class="topbar" style="margin-left:0;width:100%; color:white; font-size: 2.734vw;">
+                    <p style="margin-left: 10px;">Wireframing4.png</p></div>
+                <img src="wf4.png" style="width:99%;height:auto;">
+            </div>
+        </div>
+        
+        <div>
+            <div class="topbar" style="margin-left:0;width:100%; color:white; font-size: 2.734vw;">
+                <p style="margin-left: 10px;">Mockup_1.mp4</p></div>
+        <video autoplay muted loop style="width:100%; height:auto;">
+            <source src="macbook-air-m2-turn.mp4">
+        </video>
+        </div>
+
+        <div>
+            <div class="topbar" style="margin-left:0;width:100%; color:white; font-size: 2.734vw;">
+                <p style="margin-left: 10px;">Mockup_2.mp4</p></div>
+        <video autoplay muted loop style="width:100%; height:auto;">
+            <source src="macbook-subtle-turn.mp4">
+        </video>
+        </div>
+
+
+        <div>
+            <div class="topbar" style="margin-left:0;width:100%; color:white; font-size: 2.734vw;">
+                <p style="margin-left: 10px;">Mockup_3.mp4</p></div>
+        <video autoplay muted loop style="width:100%; height:auto;">
+            <source src="macbook-zoom-out.mp4" >
+        </video>
+        </div>
+
+
+        
+        <br>
+        
+
+        
     </div>
 </body>
+</html>

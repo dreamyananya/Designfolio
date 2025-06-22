@@ -95,29 +95,6 @@ ul li{
 
 
 
-.scroll-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-.scroll-item {
-    width: 200px; /* Adjust as needed */
-    height: auto;
-    margin: 30px;
-    
-    opacity: 0;
-    transform: translateX(100%);
-    transition: transform 1s ease-out, opacity 1s ease-out;
-    border-radius: 16px;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
-}
 
 .show {
     opacity: 1;
@@ -126,43 +103,33 @@ ul li{
 
 </style>
 
-<script>
-    document.addEventListener("scroll", function () {
-    let items = document.querySelectorAll(".scroll-item");
-    let scrollY = window.scrollY;
 
-    items.forEach((item, index) => {
-        let revealPoint = window.innerHeight / 1.2; // Adjust trigger point
-        let itemTop = item.getBoundingClientRect().top;
-
-        if (itemTop < revealPoint) {
-            setTimeout(() => {
-                item.classList.add("show");
-            }, index * 300); // Delay each image
-        }
-    });
-});
-</script>
 
 <body>
-    <div class="main" style="display: flex; flex-direction: column;">
+    <div class="main" style="display: flex; flex-direction: column; position: fixed; width: 100%;background: #ffffff;
+background: linear-gradient(-1deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 1) 42%);">
         <div class="topbar">
             <p style="font-size: 1.941vw; color:white; padding:0.391vw;">InkStrip</p>
         </div>
         <div class="home" style="margin:0.777vw;">
             <a href="index.html"
                 style="text-decoration: none; font-size:2.4vw; color:black; margin-right: 1.953vw;">Home</a>
+            <a href="projectmainpagepink.html"
+                style="text-decoration: none; font-size:2.4vw; color:black; margin-right: 1.953vw;">Back</a>
             <a href="#prob"
                 style="text-decoration: none; font-size:2.4vw; color:black; margin-right: 1.953vw;">Problem</a>
             <a href="#kt1"
                 style="text-decoration: none; font-size:2.4vw; color:black; margin-right: 1.953vw;">Research</a>
+            <a href="#dp"
+                style="text-decoration: none; font-size:2.4vw; color:black; margin-right: 1.953vw;">Desgin Process</a>
             <a href="#wf"
                 style="text-decoration: none; font-size:2.4vw; color:black; margin-right: 1.953vw;">Wireframe</a>
             <a href="#mk"
                 style="text-decoration: none; font-size:2.4vw; color:black; margin-right: 1.953vw;">Mockup</a>
         </div>
     </div>
-
+<br>
+    <br>
     <div class="backbox">
         <div class="mainimage">
             <img src="inkstrippp.png" style="width:95%; height:auto; margin-top:1.465vw;
@@ -239,34 +206,68 @@ ul li{
             </p><br>
         </div><hr><br>
 
-        <p class="mat" id="wf">Brainstorming and Wireframing</p>
-        <div class="parent" style="display:flex; flex-direction: row; flex-wrap: wrap; margin-top:2.441vw; justify-content: space-around; align-items: center;">
-            <div class="imge" >
-                <div class="topbar" style="margin-left:0;width: 53.711vw;color:white; font-size: 2.734vw;"><p style="margin-left: 10px;">Brainstorming_1.png</p></div>
-                <img src="ssi (2).jpeg" style="width:53.711vw; height:auto;">
+        <p class="mat" id="dp">Brainstorming and Wireframing</p>
+            <div class="imge" style="margin-top: 4.395vw;"  >
+                <div class="topbar" style="margin-left:0;width:99%;color:white; font-size: 2.734vw;">
+                    <p style="margin-left: 10px;">Brainstorming_1.png</p></div>
+                <img src="res1.jpg" style="width:99%; height:auto;">
             </div>
 
-            <div class="imge" >
-                <div class="topbar" style="margin-left:0;width: 53.711vw;color:white; font-size: 2.734vw;">
+            <div class="imge" style="margin-top: 4.395vw;">
+                <div class="topbar" style="margin-left:0;width: 99%;color:white; font-size: 2.734vw;">
                     <p style="margin-left: 10px;">Brainstorming_2 + Sketching.png</p></div>
-                <img src="ssi (1).jpeg" style="width:53.711vw; height:auto; ">
+                <img src="ssi (1).jpeg" style="width:99%; height:auto; ">
             </div>
+
+
 
         
+        
+        <div id="wf" style="display: flex; flex-direction: row; align-items: center; justify-content: space-evenly;">
+            <div style="margin-top:2.441vw;">
+                <div class="topbar" style="margin-left:0;width:99%; color:white; font-size: 2.734vw;">
+                    <p style="margin-left: 10px;">Wireframing1.png</p></div>
+                <img src="Slide 16_9 - 1.png" style="width:99%;height:auto;">
+            </div>
+            <div style="margin-top:2.441vw;">
+                <div class="topbar" style="margin-left:0;width:99%; color:white; font-size: 2.734vw;">
+                    <p style="margin-left: 10px;">Wireframing2.png</p></div>
+                <img src="Slide 16_9 - 2.png" style="width:99%;height:auto;">
+            </div>
         </div>
-
-        <div style="margin-top:2.441vw;">
-            <div class="topbar" style="margin-left:0;width:100%; color:white; font-size: 2.734vw;">
-                <p style="margin-left: 10px;">Prototype.png</p></div>
-            <img src="inkss.png" style="width:100%;height:auto;">
+        <div style="display: flex; flex-direction: row; align-items: center; justify-content: space-evenly;">
+            <div style="margin-top:2.441vw;">
+                <div class="topbar" style="margin-left:0;width:99%; color:white; font-size: 2.734vw;">
+                    <p style="margin-left: 10px;">Wireframing3.png</p></div>
+                <img src="Slide 16_9 - 3.png" style="width:99%;height:auto;">
+            </div>
+            <div style="margin-top:2.441vw;">
+                <div class="topbar" style="margin-left:0;width:99%; color:white; font-size: 2.734vw;">
+                    <p style="margin-left: 10px;">Wireframing4.png</p></div>
+                <img src="Slide 16_9 - 4.png" style="width:99%;height:auto;">
+            </div>
         </div>
+        
+        <div style="display: flex; flex-direction: row; align-items: center; justify-content: space-evenly;">
+            <div style="margin-top:2.441vw;">
+                <div class="topbar" style="margin-left:0;width:99%; color:white; font-size: 2.734vw;">
+                    <p style="margin-left: 10px;">Prototype.png</p></div>
+                <img src="proto (1).png" style="width:99%;height:auto;">
+            </div>
+            <div style="margin-top:2.441vw;">
+                <div class="topbar" style="margin-left:0;width:99%; color:white; font-size: 2.734vw;">
+                    <p style="margin-left: 10px;">Prototype.png</p></div>
+                <img src="proto (2).png" style="width:99%;height:auto;">
+            </div>
+        </div>
+       
 
-        <p class="mat" id="mk">Sample Screens</p>
-        <div class="scroll-container">
-            <img src="sssii (1).png" class="scroll-item">
-            <img src="sssii (3).png" class="scroll-item">
-            <img src="sssii (4).png" class="scroll-item">
-            <img src="ssiiiii.png" class="scroll-item">
+        <p class="mat" id="mk" style="padding-top: 4.395vw;">Sample Screens</p>
+        <div class="scroll-container" style="padding-top: 4.395vw; padding-bottom: 4.395vw; display: flex; flex-direction: row; justify-content: space-around; align-items: center; flex-wrap: wrap;">
+            <img src="sssii (1).png" class="scroll-item" style="width: 200px; height: auto; padding: 5px;">
+            <img src="sssii (3).png" class="scroll-item" style="width: 200px; height: auto; padding: 5px;">
+            <img src="sssii (4).png" class="scroll-item" style="width: 200px; height: auto; padding: 5px;">
+            <img src="ssiiiii.png" class="scroll-item" style="width: 200px; height: auto; padding: 5px;">
         </div>
 
         <div>

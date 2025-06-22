@@ -94,28 +94,7 @@ ul li{
 
 
 
-.scroll-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-    white-space: nowrap;
-}
 
-.scroll-item {
-    width: 200px; /* Adjust as needed */
-    height: auto;
-    margin: 30px;
-    opacity: 0;
-    transform: translateX(100%);
-    transition: transform 1s ease-out, opacity 1s ease-out;
-    border-radius: 16px;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
-}
 
 .show {
     opacity: 1;
@@ -124,36 +103,25 @@ ul li{
 
 </style>
 
-<script>
-    document.addEventListener("scroll", function () {
-    let items = document.querySelectorAll(".scroll-item");
-    let scrollY = window.scrollY;
 
-    items.forEach((item, index) => {
-        let revealPoint = window.innerHeight / 1.2; // Adjust trigger point
-        let itemTop = item.getBoundingClientRect().top;
-
-        if (itemTop < revealPoint) {
-            setTimeout(() => {
-                item.classList.add("show");
-            }, index * 300); // Delay each image
-        }
-    });
-});
-</script>
 
 <body>
-    <div class="main" style="display: flex; flex-direction: column;">
+    <div class="main" style="display: flex; flex-direction: column; position: fixed; width: 100%;background: #ffffff;
+background: linear-gradient(-1deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 1) 42%);">
         <div class="topbar">
-            <p style="font-size: 1.941vw; color:white; padding:0.391vw;">Timeless Tales</p>
+            <p style="font-size: 1.941vw; color:white; padding:0.391vw;">Timeless Tails</p>
         </div>
         <div class="home" style="margin:0.777vw;">
             <a href="index.html"
                 style="text-decoration: none; font-size:2.4vw; color:black; margin-right: 1.953vw;">Home</a>
+            <a href="projectmainpagepink.html"
+                style="text-decoration: none; font-size:2.4vw; color:black; margin-right: 1.953vw;">Back</a>
             <a href="#prob"
                 style="text-decoration: none; font-size:2.4vw; color:black; margin-right: 1.953vw;">Problem</a>
             <a href="#kt1"
                 style="text-decoration: none; font-size:2.4vw; color:black; margin-right: 1.953vw;">Research</a>
+            <a href="#dp"
+                style="text-decoration: none; font-size:2.4vw; color:black; margin-right: 1.953vw;">Desgin Process</a>
             <a href="#wf"
                 style="text-decoration: none; font-size:2.4vw; color:black; margin-right: 1.953vw;">Wireframe</a>
             <a href="#mk"
@@ -270,13 +238,12 @@ ul li{
             <img src="Screenshot 2025-03-30 151555.png" style="width:100%;height:auto;">
         </div>
 
-        <p class="mat" id="mk">Sample Screens</p>
-        <div class="scroll-container">
-            <img src="screen.png" class="scroll-item">
-           
-            <img src="scc2.png" class="scroll-item">
-            <img src="scc3.png" class="scroll-item">
-            <img src="scc.png" class="scroll-item">
+        <p class="mat" id="mk" style="padding-top: 4.395vw;">Sample Screens</p>
+        <div class="scroll-container" style="padding-top: 4.395vw; padding-bottom: 4.395vw; display: flex; flex-direction: row; justify-content: space-around; align-items: center; flex-wrap: wrap;">
+            <img src="screen.png" class="scroll-item" style="width: 200px; height: auto; padding: 5px; border-radius: 14px;">
+            <img src="scc2.png" class="scroll-item" style="width: 200px; height: auto; padding: 5px; border-radius: 14px;">
+            <img src="scc3.png" class="scroll-item" style="width: 200px; height: auto; padding: 5px; border-radius: 14px;">
+            <img src="scc.png" class="scroll-item" style="width: 200px; height: auto; padding: 5px;  border-radius: 14px;">
         </div>
 
         <div>
